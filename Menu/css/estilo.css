@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+
+h1{
+    color: white;
+    background-color: rgb(43, 226, 156);
+    padding: 20px 0 30px 5px;
+    border-color: aquamarine;
+    border-radius: 25px;
+    
+}
+
+p{
+    color:#888;
+    margin: 0 0 30px 0;
+}
+
+/* tirar o marcador de link */
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container{    
+    width: 90%;
+    margin: 5px auto;
+    padding: 15px;
+    border-radius: 25px;
+    border-color: rgb(156, 224, 198);
+    justify-content: center;
+    display: flex;
+}
+
+.row{
+    /* margin interna da linha */
+    padding: 5px;
+}
+
+.row::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.col-1{ width: 10%; float: left;}
+.col-2{ width: 20%; float: left;}
+.col-3{ width: 30%; float: left;}
+.col-4{ width: 40%; float: left;}
+.col-5{ width: 50%; float: left;}
+.col-6{ width: 60%; float: left;}
+.col-7{ width: 70%; float: left;}
+.col-8{ width: 80%; float: left;}
+.col-9{ width: 90%; float: left;}
+.col-10{ width: 100%; float: left;}
+
+.row-flex{ 
+    display: flex; 
+    gap: 5px; 
+    margin: 15px 0; /* atualizado */
+}
+
+.col{
+    width: 100%;   
+     
+}
+
+/* centraliza objetos */
+.centralizar-v{
+    display: flex; 
+    align-items: center;
+}
+
+.centralizar-h{
+    display: flex;
+    justify-content: center;
+}
+
+/* espaço entre objetos */
+.espaco-v{height: 5px;}
+.espaco-h{width: 5px;}
+
+.vermelho{
+    color:red;
+}
+
+.azul{
+    color: blue;
+}     
+
+/* TABELA */
+table{
+    border: 1px solid #000;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr{
+    border: 1px solid #000;
+}
+
+th, td{
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+th{
+    background-color: #888;
+}
+
+tr:hover td{
+    background-color: #ddd;
+}
+
+/* INPUT */
+input[type=text], [type=tel], 
+[type=email], [type=password], select{
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #888;
+    height: 45px;  /* atualizado */
+    font-size: 18px;  /* atualizado */
+    margin-top: 5px;  /* atualizado */
+}
+
+input[type=reset]{
+    background-color: #bbb;
+    padding: 20px 40px;
+    border: 1px solid #bbb; 
+    border-radius: 8px;   /* atualizado */ 
+    cursor: pointer;   /* atualizado */
+}
+
+input[type=submit]{
+    background-color: green;
+    color: white;
+    padding: 20px 50px;
+    border: 1px solid green;
+    border-radius: 8px;   /* atualizado */  
+    cursor: pointer;   /* atualizado */
+}
+
+input[type=file]{
+    display: none;
+}
+
+label{
+    cursor: pointer;    
+    font-weight: bold; /* atualizado */
+    color: #777; /* atualizado */
+}
+
+/* MENU */
+.menu ul{    
+    height: 51px;
+    background-color: silver;    
+    display: flex;
+    justify-content: end; /* alinha a direta da tela */
+}
+
+.menu ul li{    
+    list-style-type: none;
+    padding: 15px 25px;
+    font-weight: 500; /* negrito no menu */
+}
+
+.menu ul li:hover{
+    background-color: blueviolet;
+    color: #fff;
+}
+
+/* FINAL DO MENU  */
+
+.alert{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 60px;            
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.sucesso{
+    background-color: lightgreen;
+    color: green;
+    border: 1px solid green;
+}
+
+.erro{
+    background-color: lightpink;
+    color: red;
+    border: 1px solid red;
+}
+
+.mens_erro{
+    display: none; 
+    color: red;
+}
+
+@media screen and (max-width:800px){
+
+    [class^="col-"]{width: 100%; float: left;}
+    
+    .row-flex{
+        flex-direction: column;
+    }
+
+}
+
